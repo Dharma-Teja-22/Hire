@@ -36,6 +36,7 @@ try {
         TABLENAME4: process.env.TABLENAME4,
         TABLENAME5: process.env.TABLENAME5,
         SECRET_KEY: process.env.SECRET_KEY,
+        SQL_PORT:process.env.SQL_PORT,
         PORT : process.env.PORT
     };
     console.log(config)
