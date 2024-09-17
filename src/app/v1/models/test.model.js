@@ -9,7 +9,7 @@ class Test {
 
     static async create(data) {
         const pool = await poolPromise;
-        if(data.role === "Manager")
+        if(data.role == "Manager")
         {
             try 
             {
@@ -21,10 +21,10 @@ class Test {
             catch (err) 
             {
                 console.error(err)
-                return { status: StatusCodes.CONFLICT, msg: "Duplicate entry found" };
+                return { status: StatusCodes.CONFLICT, msg: "Duplicate entry found", err };
             }
         }
-        else if(data.role === "Candidate")
+        else if(data.role == "Candidate")
         {
             try 
             {
@@ -47,7 +47,7 @@ class Test {
     static async login(data) 
     {
         const pool = await poolPromise
-        if(data.role === "Manager")
+        if(data.role == "Manager")
         {
             try 
             {
@@ -75,7 +75,7 @@ class Test {
             }
         }
 
-        else if(data.role === "Candidate")
+        else if(data.role == "Candidate")
         {
             try 
             {
@@ -100,7 +100,7 @@ class Test {
             catch (err) 
             {
                 console.error(err)
-                return { status: StatusCodes.FORBIDDEN, msg: "Invalid Credentials, check your email and password once." };
+                return { status: StatusCodes.FORBIDDEN, msg: "Invalid Credentials, check your email and password once.", err };
             }
         }
         else
