@@ -71,7 +71,7 @@ class Test {
             catch (err) 
             {
                 console.log(err)
-                return { status: StatusCodes.FORBIDDEN, msg: "Invalid Credentials, check your email and password once." };
+                return { status: StatusCodes.FORBIDDEN, msg: "Invalid Credentials, check your email and password once.", err };
             }
         }
 
