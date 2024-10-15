@@ -354,6 +354,7 @@ class Manager {
       return { status: StatusCodes.CONFLICT, msg: err };
     }
   }
+  
 }
 
 export default Manager;

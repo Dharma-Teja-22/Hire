@@ -3,7 +3,6 @@ import { poolPromise } from "../utils/dbConnection.js";
 import config from "../../../../config.js";
 
 class Dashboard {
-  
     static async jobs(id) {
         try {
             const pool = await poolPromise;
@@ -23,7 +22,6 @@ class Dashboard {
             throw err;
         }
     }
-
 }
 
 export default Dashboard;
